@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- index.html -->
+    <meta charset="UTF-8">
+    <!-- 반응형 웹을 위한 Bootstrap 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap MaxCDN 정의-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+        }
+
+        @media (min-width: 1500px) {
+            .container {
+                width: 1450px;
+            }
+        }
+
+        @media (min-width: 1800px) {
+            .container {
+                width: 1750px;
+            }
+        }
+
+        .navbar {
+            font-size: 20px;
+            height: 7%;
+            margin-bottom: 0;
+            border-radius: 0;
+            outline: 0;
+            border: 0;
+            font-family: SpoqaHanSansNeo-Regular;
+            padding-top: 0.3%;
+            text-align: center;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar .navbar-nav {
+
+            display: inline-block;
+            float: none;
+
+        }
+
+
+
+        .navbar .navbar-collapse {
+
+            text-align: center;
+
+        }
+
+        .collapse>.nav>ul {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .carousel-inner>.item>img {
+            width: 100%;
+            height: auto;
+        }
+
+        .mainImg {
+            width: 100%;
+            height: auto;
+        }
+
+        .modal-content {
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .collapse>.nav>li>a {
+            color: black;
+
+        }
+
+        .collapse>.nav>li>a:hover {
+            color: white;
+            background-color: black;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+        }
+
+        .rounded {
+            border-radius: .80rem !important
+        }
+
+        .carousel-control.left,
+        .carousel-control.right {
+            background-image: none
+        }
+
+        .row>.col-md-4>.collapse>span {
+            font-family: NEXON Lv1 Gothic OTF;
+            margin: 0;
+            font-size: 15px;
+        }
+
+        .row>.col-md-4>.collapse>p {
+            margin-bottom: 10px;
+        }
+
+
+        @font-face {
+            font-family: 'IM_Hyemin-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'EliceDigitalBaeum_Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'twaysky';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Cafe24SsurroundAir';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'SpoqaHanSansNeo-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'EliceDigitalBaeum_Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GowunDodum-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'SBAggroB';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .error-num {
+            font-size: 9em;
+            color: rgb(25, 19, 117);
+        }
+
+        .eye {
+            background: rgb(25, 19, 117);
+            border-radius: 50%;
+            display: inline-block;
+            height: 100px;
+            position: relative;
+            width: 100px;
+        }
+
+        .eye::after {
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            bottom: 56.1px;
+            content: ' ';
+            height: 33px;
+            position: absolute;
+            right: 33px;
+            width: 33px;
+
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        p {
+            margin-bottom: 4em;
+            font-size: 2em;
+            font-family: NEXON Lv1 Gothic OTF;
+        }
+
+        .as {
+            font-size: 2em;
+            color: rgb(25, 19, 117);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: EliceDigitalBaeum_Bold;
+        }
+
+        .as:hover {
+            color: rgb(0, 0, 0);
+        }
+    </style>
+
+
+    <!-- Navigation Bar Container -->
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top navbar-expand-sm" style="background-color: #ffff">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNav"
+                        style="color: black;">
+                        <span class="icon-bar" style="background-color: black;"></span>
+                    </button>
+                    <a class="navbar-brand" href="www.ohxjo.cloud" style="width: 200px;">
+                        <img style="max-width:150px; margin-top: -12px; margin-right: 100px; margin-left: 20px;"
+                            src="https://s3.ap-northeast-2.amazonaws.com/ohxjo.cloud/logo2.png">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse " id="MyNav" style="color:black; background-color: #ffff; ">
+                    <ul class="nav navbar-nav" style="display: flex; justify-content: space-around; margin: 0;">
+                        <li class="nav-item"><a href="#">클래스</a></li>
+                        <li class="nav-item"><a href="#">스토어</a></li>
+                        <li class="nav-item"><a href="#">LIVE</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">고객센터</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">1:1 문의</a></li>
+                            </ul>
+
+                        <li class="nav-item"><a data-toggle="modal" data-target="#Modal_Signup"><span
+                                    class="glyphicon glyphicon-user"></span> 회원가입</a></li>
+                        <li class="nav-item"><a data-toggle="modal" data-target="#Modal_Login"><span
+                                    class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
+                    </ul>
+                </div>
+        </nav>
+        <br><br><br>
+
+    </div>
+</head>
+
+<body>
+    <div class="full-screen">
+        <div class='container' style="text-align: center;">
+            <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+            <div class='eye'></div>
+            <div class='eye'></div>
+            <span class="error-num">P</span>
+            <span class="error-num">S</span>
+
+            <p class="sub-text">
+                페이지에 문제가 생겨 해결중입니다.
+                <br>
+                There is a problem with the page and we are working on it.</p>
+            <a class="as" type="button" value="BACK" onClick="history.go(-1)"> Go back</a>
+        </div>
+    </div>
+
+</body>
